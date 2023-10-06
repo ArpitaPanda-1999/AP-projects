@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scal-1">
+	<script>
+    	$(document).ready(function(){
+           $('[data-toggle="tooltip"]').tooltip();
+    	});
+    </script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<title>GOSHELTER home</title>
+	<style>
+		.container{padding-top:20px;overflow-x:hidden;}
+		.image img{
+			height:60px;
+			margin-top:10px;
+			margin-bottom:7px;
+		}
+		@media(max-width:768px){
+			.image img{height:40px;}
+		}
+		sup{color:red;}
+		.hr{
+			border-top: 1px solid gray;
+			margin-top:20px;
+        }
+        #list-prop-link{
+        	color:white;
+        	text-decoration: none;
+        }
+        .nav{
+        	font-family:calibri;
+        	font-weight:bolder;
+        	font-size:18px;
+          margin-bottom: 0px;
+          margin-top:0px; 
+        }
+        #nav{
+        	color:black;
+        	background-color:white;
+        }
+        #nav:hover{
+        	border-top:4px solid #1dc6bc;
+        	color:#1dc6bc;
+          margin-bottom:0px;
+        }
+        .navbar-toggle .icon-bar{
+        	background-color:gray;
+        }
+        .navbar-toggle{
+        	float: none;
+        	border:1px solid lightgray;
+        	margin-top:20px;
+        }	            
+        
+        .modal-header{
+			background-color: #1dc6bc;
+		}
+		.modal-header h4{color:white;}
+		.submit-button{
+			padding-right:100px;
+			padding-left:100px;
+			padding-top:10px;
+			padding-bottom:10px;
+			background-color: #1dc6bc;
+			border:none;
+			color:white;
+			margin-top: 30px;
+		}
+		.submit-button1{
+			padding-right:100px;
+			padding-left:100px;
+			padding-top:10px;
+			padding-bottom:10px;
+			background-color: #1dc6bc;
+			border:none;
+			color:white;
+			margin-top: 30px;
+		}
+		#login{
+            color:black;
+            background-color: transparent;
+        }
+        .hide-property{
+        	display: none;
+        }
+        @media(max-width:768px){
+            .showing-property{display: none;}
+            .hide-property{display: block;}
+        }
+        #carall{
+        	width:100%;
+        }
+        #Popular-location{
+        	color:navy;
+            letter-spacing:1px;
+            font-family:calibri;
+            font-size:40px;
+            text-align:center;
+        }
+        #carpop{
+        	border:2px solid gray;
+        	border-radius: 100%;
+        	height:100px;
+        	width:100px;
+        }
+        #h31{
+        	font-size: 35px;
+        	margin-bottom: 40px;
+        	margin-top:70px;
+        	color:navy;
+        	letter-spacing:1px;
+        	text-align:center;
+        }
+        .circle{
+        	border:3px solid white;
+        	border-radius:100%;
+        	box-shadow: 0px 10px 10px 0px lightgray;
+        	height:120px;
+        	width:120px;
+        }
+        .place{
+        	color:#da8e03;
+        	font-family:calibri;
+        	font-size: 16px;
+        	padding-top: 10px;
+        }
+        @media(max-width:768px){
+        	.circle{
+        		height:60px;
+        		width: 60px;
+        	}
+        }
+		.goloc{
+            background-color:#eff5fb;
+            padding:15px;
+        }
+        .goloc:hover{
+        	background-color:white;
+        	box-shadow:2px 8px 10px 0px lightgray;
+        }
+        .goloc img{
+             height:300px;
+             width:100%;
+        }
+        #h5{
+        	margin-top: 20px;
+        	color:navy;
+        	font-size:13px;
+        	font-weight:bold;
+        	padding-top:10px;
+        	letter-spacing: 1px;
+        }
+        #h6{
+        	letter-spacing:1px;
+        	font-size:13px;
+        }
+        .fa-star{
+        	color:orange;
+        }
+        @media(max-width:999px){
+        	#h5{
+                margin-bottom: 0px;
+        		margin-top: 0px;
+        	    font-size:8px;
+        	}
+        	#h6{
+        		margin-bottom: 28px;
+        	    font-size:8px;
+        	}
+        	#h61{
+        	    font-size:8px;
+        	}
+        	.view-detail{
+        	    font-size:10px;
+            }
+            .free-visit{
+            	font-size:10px;
+            }    
+            .fa-male{
+        	    width:31px;
+            }
+            .fa-female{
+            	width:31px;
+            }
+
+        }
+        #cctv{
+            height:32px;
+            width:32px;
+            border-radius:100%;
+            border:2px solid gray;
+            margin-bottom: 25px;
+        }
+        .view-more{
+
+        	color:black;
+        	font-size: 11px;
+        	letter-spacing:1px;
+        }
+        .view-more:hover{
+        	text-decoration:none;
+
+        }
+        .view-detail{
+        	background-color: #1dc6bc;
+        	padding-right: 32px;
+        	padding-left: 32px;
+        	padding-top: 12px;
+        	padding-bottom: 12px;
+        	border-radius:5px;
+        	font-weight:bold;
+        	letter-spacing: 1px;
+        	text-decoration:none;
+        	color:white;
+        }
+        .view-detail:hover{
+        	color:white;
+        	text-decoration: none;
+        }
+        .free-visit{
+        	background-color:#5341b4;
+            padding-right: 42px;
+        	padding-left: 42px;
+        	padding-top: 12px;
+        	padding-bottom: 12px;
+        	border-radius:5px;
+            font-weight:bold;
+            letter-spacing:1px;
+            text-decoration:none;
+        	color:white;
+        }
+        .free-visit:hover{
+        	color:white;
+        	text-decoration: none;
+        }
+        @media(max-width: 1200px){
+        	.free-visit{
+        		padding-left: 18px;
+        		padding-right: 15px;
+        	}
+        	.view-detail{
+        		padding-right: 6px;
+        		padding-left: 7px;
+        	}
+        }
+        #for-bed{
+        	background-color: red;
+        	color:white;
+        	height:25px;
+        	width:85px;
+        	padding:5px;
+        	font-size: 15px;
+        }
+        .fa-male{
+        	color:white;
+        	height:32px;
+        	width:28px;
+        	border-radius:11px;
+        	background-color:brown;
+        	margin-top:10px;
+        	padding:8px;
+        }
+        .fa-male:hover{
+        	color:black;
+        	background-color:#eff5fb;
+        }
+        .fa-female{
+        	color:white;
+        	height:32px;
+        	width:28px;
+        	border-radius:11px;
+        	background-color:navy;
+        	margin-top:10px;
+        	padding:8px;
+        }
+        .fa-female:hover{
+        	color:black;
+        	background-color:#eff5fb;
+        }
+        .space{
+        	height:10px;
+        }
+        .gocenter{
+        	padding-bottom: 15px;
+        	background-color:#eff5fb; 
+        }
+        .hide-prime{
+        	display: none;
+        }
+        .hide-prime img{
+        	height: 150px;
+        	width: 100%;
+        }
+        .shown{
+        	margin-bottom: 15px;
+        }
+        @media(max-width:768px){
+            .shown{display:none;}
+            .hide-prime{
+            	display: block;
+            	margin-bottom: 15px;
+            }
+        }
+        #working-space{
+        	width:100%;
+            height:auto;
+        }
+        .full-screen{
+			background-image:url('working people4.jpg');
+			background-repeat:no-repeat;
+			background-size:cover;
+			height:auto;
+		}
+		#Unique{
+			margin-top: 70px;
+            color:white;
+		}
+		#smile{
+			font-size:70px;
+			color:white;
+			text-shadow: 0px 10px 10px 0px white;
+			margin-top:90px;
+		}
+		#para{
+			margin-bottom:45px;
+			margin-top: 30px;
+			color:white;
+			font-size:16px;
+		}
+		.space3{
+			height:100px;
+		}
+		.footer{
+            background-color:#1dc6bc;
+            height:auto;}
+        #h52{
+            font-size:25px;
+            font-family:calibri;
+            margin-top:10px;
+        }
+        #h53{
+            font-size:25px;
+            font-family:calibri;
+            margin-top:30px;
+        }
+        .row{
+            margin-top:30px;
+            margin-bottom:50px;
+        }
+        .btn1{
+            border:1px solid white;
+            padding:7px;
+            font-family: calibri;
+            font-size:18px;
+            background-color:#1dc6bc;
+            margin-bottom:7px;
+            border-radius:0px;
+            color:white;
+        }
+        .btn1:hover{color:white;}
+        .fa-facebook{
+            background-color:blue;
+            height:30px;
+            width: 30px;
+            border-radius:25px;
+            text-align: center;
+            padding-top:7px;
+            color: white;
+            margin-right:7px;
+        }
+        .fa-facebook:hover{
+            color:blue;
+            background-color:white;
+        }
+        .fa-instagram{
+            background-color:#007bff;
+            height:30px;
+            width: 30px;
+            border-radius:25px;
+            text-align: center;
+            padding-top:7px;
+            color: white;
+            margin-right:7px;
+        }
+        .fa-instagram:hover{
+            color:#007bff;
+            background-color:white;
+        }
+        .fa-twitter{
+            background-color:red;
+            height:30px;
+            width: 30px;
+            border-radius:25px;
+            text-align: center;
+            padding-top:7px;
+            color: white;
+            margin-right:7px;
+        }
+        .fa-twitter:hover{
+            color:red;
+            background-color:white;
+        }
+        .fa-linkedin{
+            background-color:rgb(0, 115, 176);
+            height:30px;
+            width: 30px;
+            border-radius:25px;
+            text-align: center;
+            padding-top:7px;
+            color: white;
+        }
+        .fa-linkedin:hover{
+            color:rgb(0, 115, 176);
+            background-color:white;
+        }
+        #Quick{
+            font-family: calibri;
+            color:white;
+            font-size: 18px;
+            text-decoration:none;
+        }
+        #color{
+            list-style:none;
+            color:white;
+            letter-spacing:1px;
+            margin-bottom:7px;
+        }
+        #color1{
+            list-style:none;
+            color:white;
+            letter-spacing:1px;
+            margin-bottom:15px;
+        }
+        .image-footer{
+        	margin-bottom:28px;	
+        }
+        .image-footer img{width:150px;}
+        .color-quantumware{
+            color:#1dc6bc;  
+        }
+        .color-quantumware:hover{
+            text-decoration:none;
+            color:#1dc6bc;
+        }
+        @media(max-width:768px){
+        	.image-footer{
+        		text-align: center;
+        	}
+        }
+        h6{
+        	margin-top: 30px;
+        	font-size: 15px;
+        	margin-bottom: 20px;
+        }
+        @media(max-width: 768px){
+        	h6 .pull-right{
+        		text-align: center;
+        	}
+        }
+        
+	</style>
+</head>
+<body>
+	    <div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 image">
+					<center>
+					    <a href="#">
+						    <img src="logo.png">
+					    </a>
+				    </center>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 showing-property">
+					<div class="pull-right">
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-defult" data-toggle="modal" data-target="#login-id">Login</button>
+	                        <div class="modal" id="login-id">
+		                        <div class="modal-dialog">
+			                        <div class="modal-content">
+				                        <div class="modal-header">
+					                        <button type="button" class="close"  data-dismiss="modal">&times;</button>
+					                        <h4>Login</h4>
+				                        </div>
+				                        <div class="modal-body">
+					                        <div class="row">
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-envelope"></i>
+				    	                                Mobile Number
+				                                    </label>
+				                                    <input type="text" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-key"></i>
+				    	                                Password
+				                                    </label>
+				                                    <input type="Password" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    	                            <button type="button" class="submit-button form-control">Login</button>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5><input type="checkbox">Remember me?</h5>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5 class="pull-right">Forgot password?</h5>
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				        	                        <h5 class="text-center">Don't have an account?<a href="#"><strong>Register Now</strong></a></h5>
+				                                </div>
+				                            </div>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#register">Register</button>
+		                    <div class="modal" id="register">
+			                    <div class="modal-dialog">
+				                    <div class="modal-content">
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Registraion</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <div class="row">
+						                        <form>
+							                        <div class="form-group">
+							                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								                            <label>
+								    	                        <i class="fa fa-phone"></i>
+								                                Mobile Number
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Mobile Number">
+								                        </div>    
+							                        </div>
+							                        <center>
+						    	                        <button type="button" class="submit-button" class="form-control">SEND OTP</button>
+						                            </center>    
+						                        </form>
+					                        </div>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                   <!-- </div> -->
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Enquiry</button>
+		                    <div class="modal" id="modal">
+			                    <div class="modal-dialog modal-lg">
+				                    <div class="modal-content"> 
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Enquiry</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <h6><i><sup>*</sup>Fields are mandatory</i></h6>
+						                    <form>
+						                        <div class="row">
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							                            <div class="form-group">
+								                            <label>
+								    	                        <i class="fa fa-user"></i>
+								                                Full Name<sup>*</sup>
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Fullname">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-phone"></i>
+							    	                            Mobile Number<sup>*</sup>
+							                                </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Mobile number">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-map-marker"></i>
+							    	                            Interested Location<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Your Location">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-home"></i>
+							    	                            Wanted to stay from<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter your stay date">
+							                           </div>
+							                        </div>  
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					  		                            <div class="form-group">
+					 			                            <label>
+						 			                            <i class="fa fa-envelope"></i>
+						  	                          	        Email Address<sup>*</sup>
+						  		                            </label>
+						  		                            <input type="text" class="form-control" placeholder="Enter Email Address">
+						  		                        </div> 
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Enquiry For<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>Select Enquiry For</option>
+						  				                        <option>Hostel/PG</option>
+						  				                        <option>Rooms</option>
+						  				                        <option>Flats</option>
+						  				                        <option>Office Space</option>
+						  				                        <option>partnership Related</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Occupation<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>--Select Occupation--</option>
+						  				                        <option>Student</option>
+						  				                        <option>Job Holder</option>
+						  				                        <option>Allen Student</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Gender<sup>*</sup></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Female <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>male <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  		                        </div>
+						                            </div>
+						                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						       	                        <div class="form-group">
+						  		                            <label>
+						  			                            <i class="fa fa-comments"></i>
+						  	                                    Comment/Message
+						  		                            </label>
+						  		                            <textarea class="form-control" placeholder="Type Comment/Message"></textarea>
+							                            </div>
+						                            </div>
+						                            <center class="form-group">
+						    	                        <button type="button" class="submit-button" class="form-control">Submit</button>
+						                            </center>
+						                        </div>
+						                    </form>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                    <!-- </div> -->
+                     <!-- list your property -->
+                        <button type="button" class="btn btn-warning"><a href="list-your-property.html" id="list-prop-link">List your property</a></button>
+                    <!-- end here lyp -->
+                    </div>
+					<!-- ----------------hr------------- -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hr"></div>
+                    <!-- -------------end hr------------ -->
+                    <!-- ---------navbar------------ -->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			            <nav class="navbar">
+                            
+           	                    <ul class="nav navbar-nav navbar-right">
+           		                    <li><a href="GOSHELTER home.html" id="nav">Home</a></li>
+           	                        <li><a href="GOshelterAboutUs.html" id="nav">About Us</a></li>
+          	                        <li><a href="#" id="nav">Bhubaneswar <i class="fa fa-caret-down"></i></a></li>
+          	                        <li><a href="#" id="nav">Durgapur <i class="fa fa-caret-down"></i></a></li>
+           	                        <li><a href="fGoshelter.html" id="nav">Contact Us</a></li>
+           	                    </ul>
+           	                        
+                        </nav>
+	     	        </div>    
+	     	        <!-- --------------end navbar---------------- -->
+				</div>
+				<!-- ---------------the hide-property------------- -->
+				<div class="hide-property">
+					<center>
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-defult" data-toggle="modal" data-target="#login-id">Login</button>
+	                        <div class="modal" id="login-id">
+		                        <div class="modal-dialog">
+			                        <div class="modal-content">
+				                        <div class="modal-header">
+					                        <button type="button" class="close"  data-dismiss="modal">&times;</button>
+					                        <h4>Login</h4>
+				                        </div>
+				                        <div class="modal-body">
+					                        <div class="row">
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-envelope"></i>
+				    	                                Mobile Number
+				                                    </label>
+				                                    <input type="text" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-key"></i>
+				    	                                Password
+				                                    </label>
+				                                    <input type="Password" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    	                            <button type="button" class="submit-button form-control">Login</button>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5><input type="checkbox">Remember me?</h5>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5 class="pull-right">Forgot password?</h5>
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				        	                        <h5 class="text-center">Don't have an account?<a href="#"><strong>Register Now</strong></a></h5>
+				                                </div>
+				                            </div>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#register">Register</button>
+		                    <div class="modal" id="register">
+			                    <div class="modal-dialog">
+				                    <div class="modal-content">
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Registraion</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <div class="row">
+						                        <form>
+							                        <div class="form-group">
+							                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								                            <label>
+								    	                        <i class="fa fa-phone"></i>
+								                                Mobile Number
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Mobile Number">
+								                        </div>    
+							                        </div>
+							                        <center>
+						    	                        <button type="button" class="submit-button" class="form-control">SEND OTP</button>
+						                            </center>    
+						                        </form>
+					                        </div>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                   <!-- </div> -->
+	                   <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Enquiry</button>
+		                    <div class="modal" id="modal">
+			                    <div class="modal-dialog modal-lg">
+				                    <div class="modal-content"> 
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Enquiry</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <h6><i><sup>*</sup>Fields are mandatory</i></h6>
+						                    <form>
+						                        <div class="row">
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							                            <div class="form-group">
+								                            <label>
+								    	                        <i class="fa fa-user"></i>
+								                                Full Name<sup>*</sup>
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Fullname">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-phone"></i>
+							    	                            Mobile Number<sup>*</sup>
+							                                </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Mobile number">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-map-marker"></i>
+							    	                            Interested Location<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Your Location">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-home"></i>
+							    	                            Wanted to stay from<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter your stay date">
+							                           </div>
+							                        </div>  
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					  		                            <div class="form-group">
+					 			                            <label>
+						 			                            <i class="fa fa-envelope"></i>
+						  	                          	        Email Address<sup>*</sup>
+						  		                            </label>
+						  		                            <input type="text" class="form-control" placeholder="Enter Email Address">
+						  		                        </div> 
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Enquiry For<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>Select Enquiry For</option>
+						  				                        <option>Hostel/PG</option>
+						  				                        <option>Rooms</option>
+						  				                        <option>Flats</option>
+						  				                        <option>Office Space</option>
+						  				                        <option>partnership Related</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Occupation<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>--Select Occupation--</option>
+						  				                        <option>Student</option>
+						  				                        <option>Job Holder</option>
+						  				                        <option>Allen Student</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Gender<sup>*</sup></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Female <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>male <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  		                        </div>
+						                            </div>
+						                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						       	                        <div class="form-group">
+						  		                            <label>
+						  			                            <i class="fa fa-comments"></i>
+						  	                                    Comment/Message
+						  		                            </label>
+						  		                            <textarea class="form-control" placeholder="Type Comment/Message"></textarea>
+							                            </div>
+						                            </div>
+						                            <center class="form-group">
+						    	                        <button type="button" class="submit-button" class="form-control">Submit</button>
+						                            </center>
+						                        </div>
+						                    </form>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                    <!-- </div> -->
+	                    <!-- ----------------hr------------- -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hr"></div>
+                        <!-- -------------end hr------------ -->
+                        <!-- ---------navbar------------ -->
+	                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			                <nav class="navbar">
+                                <div class="nav navbar-header">
+            	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#home">
+            			                <span class="icon-bar"></span>
+            			                <span class="icon-bar"></span>
+            		                    <span class="icon-bar"></span>
+            	                    </button>
+                                </div>            
+                                <div class="collapse navbar-collapse" id="home">
+           	                        <ul class="nav navbar-nav navbar-right">
+           		                        <li><a href="GOSHELTER home.html" id="nav">Home</a></li>
+           	                            <li><a href="GOshelterAboutUs.html" id="nav">About Us</a></li>
+          	                            <li><a href="#" id="nav">Bhubaneswar <i class="fa fa-caret-down"></i></a></li>
+          	                            <li><a href="#" id="nav">Durgapur <i class="fa fa-caret-down"></i></a></li>
+           	                            <li><a href="fGoshelter.html" id="nav">Contact Us</a></li>
+           	                        </ul>
+           	                    </div>        
+                            </nav>
+	     	            </div>    
+	     	        <!-- --------------end navbar---------------- -->
+					</center>
+				</div>
+				<!------end here the hide-property----------->
+			</div>
+		</div>
+	</div>
+		<!-- ------------Allen student crosusel-------------- -->
+	<div id="allencarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#allencarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#allencarousel" data-slide-to="1"></li>
+			<li data-target="#allencarousel" data-slide-to="2"></li>
+			<li data-target="#allencarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="allenstudent.png" alt="" id="carall">
+			</div>
+			<div class="item">
+				<img src="allenstudent1.png" alt="" id="carall">
+			</div>
+			<div class="item">
+				<img src="allenstudent2.png" alt="" id="carall">
+			</div>
+			<div class="item">
+				<img src="allenstudent4.png" alt="" id="carall">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#allencarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">previous</span>
+		</a>
+		<a class="right carousel-control" href="#allencarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">next</span>
+		</a>
+	</div>
+	<!-- ---------------end allen student carosusel------------------ -->
+     <!-----popular location---------->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<h1 id="Popular-location">Popular Location</h1>
+	</div>
+	<!--------------------- end popular location------------ -->
+	<!-- ------------popular location carousel----------------- -->
+	<div class="container">
+	    <div id="popular-carousel" class="carousel slide" data-ride="carousel">
+		    <div class="carousel-inner">
+			    <div class="item active">
+			    	<center>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="nayapali.html"><img src="nayapali.jpg" alt="" class="circle"></a>
+					        <p class="place">Nayapali</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="jaydev vihar.jpg" alt="" class="circle"></a>
+					        <p class="place">Jayadev Vihar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="vanivihar.jpg" alt="" class="circle"></a>
+					        <p class="place">Vani Vihar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="patia  square.jpg" alt="" class="circle"></a>
+					        <p class="place">Patia Square</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="baramunda.jpg" alt="" class="circle"></a>
+					        <p class="place">Baramunda</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="rasulghar square.jpg" alt="" class="circle"></a>
+					        <p class="place">Rasulghar Square</p>
+				        </div>
+				    </center>
+			    </div>
+			    <div class="item">
+			    	<center>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="crpfsqare.jpg" alt="" class="circle"></a>
+					        <p class="place">CRPF Square</p>	
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="master canteen.jpg" alt="" class="circle"></a>
+					        <p class="place">Master Canteen</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="kalpana square.jpg" alt="" class="circle"></a>
+					        <p class="place">Kalpana Square</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="maitrivihar.jpg" alt="" class="circle"></a>
+					        <p class="place">Maitri Vihar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="gajpati nagar.jpg" alt="" class="circle"></a>
+					        <p class="place">Gajpati Nagar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="infocity.jpg" alt="" class="circle"></a>
+					        <p class="place">Infocity Square</p>
+				        </div>
+				    </center>
+			    </div>
+			    <div class="item">
+			    	<center>
+			    	    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="kiit sqare.jpg" alt="" class="circle"></a>
+					        <p class="place">KIIT Square</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="sishuvihar.jpeg" alt="" class="circle"></a>
+					        <p class="place">Sishu vihar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="chandrasekharpur.png" alt="" class="circle"></a>
+					        <p class="place">Chandrasekharpur</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="lumbini vihar.jpg" alt="" class="circle"></a>
+					        <p class="place">Lumbini Vihar</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="baramunda.jpg" alt="" class="circle"></a>
+					        <p class="place">Baramunda ISBT</p>
+				        </div>
+				        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					        <a href="#"><img src="ssastri nagar.jpg" alt="" class="circle"></a>
+					        <p class="place">Ssastri Nagar</p>
+				        </div>
+				    </center>
+			    </div>
+		    </div>
+	    </div>
+	</div>
+	<!-- -------------end popular-liaction -carousel------------- -->
+	<!-- -----------goshelter loaction------------ -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<h3 id="h31">GoShelter Location</h3>
+	</div>
+	<!-- ---------end goshelter loacation------------- -->
+	<div class="separet">
+	<!-- ----------------------------------first div---------------------------------- -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+   	<!-- ---------------prime---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="prime.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">PRIME(GS003)</h5>
+				    <h6 id="h6">Patia,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end prime------------------------------ -->
+		<!-- ---------------goshelter sai home------------------------- -->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter sai home.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GO SHELTER SAI HOME(GS006)</h5>
+				    <h6 id="h6">Nayapali,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    17 bed left!
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ----------------------end goshelter sai home----------------------- -->
+		<!-- ---------------kiddestay---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="kiddestay.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">KIDDESTAY(GS001)</h5>
+				    <h6 id="h6">Jaydev Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    2 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end kiddestay------------------------------ -->
+	</div>
+	<!-- -----------------------------------------end first div--------------------------------------------------- -->
+	<!-- -----------------------------------second div------------------------------------- -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+		<!-- ---------------kidde homes---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="kiddestay.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">KIDDE HOMES(GS001)</h5>
+				    <h6 id="h6">Jayadev Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h5 class="pull-right" id="for-bed">
+						    4 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h5>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<img src="kitchen.png" data-toggle="tooltip" data-placement="top" title="kitchen" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end kidde homes------------------------------ -->
+		<!-- ---------------nightangle---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="nightangle.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">NIGHTANGLE(GS009)</h5>
+				    <h6 id="h6">Maitri Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    6 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end nightangle------------------------------ -->
+		<!-- ---------------goshelter olive---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter olive.png" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER OLIVE(GS007)</h5>
+				    <h6 id="h6">Chandrasekharpur,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    2 bed left!
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="caretaker" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter olive------------------------------ -->
+	</div>
+	<!-- ------------------------------------------end second div------------------------------------------------- -->
+	<!-- -----------------------------------third div------------------------------------------ -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+		<!-- ---------------goshelter warrior---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter warrior.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER WARRIOR(GS014)</h5>
+				    <h6 id="h6">Gajpati Nagar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    3 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter warrior------------------------------ -->
+		<!-- ---------------goshelter infocy---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter infocy.jpeg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER INFOCY(GS012)</h5>
+				    <h6 id="h6">SishuVihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    7 bed left!
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="caretaker" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter infocy------------------------------ -->
+		<!-- ---------------goshelter p r house---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter p r house.png" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER P R HOUSE(GS008)</h5>
+				    <h6 id="h6">Lumbini Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    33 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="security" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter p r house------------------------------ -->
+	</div>
+	<!-- ------------------------------------------end third div-------------------------------------------------- -->
+	<!-- ----------------------------fourth div------------------------------- -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+		<!-- ---------------goshlter000---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter coming soon.png" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER(000)</h5>
+				    <h6 id="h6">Maitri Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="caretaker" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter000------------------------------ -->
+		<!-- ---------------goshelter qts---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter qts.jpeg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER QTS(GS005)</h5>
+				    <h6 id="h6">Baramunda,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="diningspace.png" data-toggle="tooltip" data-placement="top" title="Diningspace" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="kitchen.png" data-toggle="tooltip" data-placement="top" title="Kitchen" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="Rooftop.png" data-toggle="tooltip" data-placement="top" title="Rooftop" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter qts------------------------------ -->
+		<!-- ---------------goshelter019---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter coming soon 2.jpeg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER(GS019)</h5>
+				    <h6 id="h6">Patia Square,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter019------------------------------ -->
+	</div>
+	<!-- ------------------------------------------end fourth div------------------------------------------------- -->
+	<!-- -------------------------------fifth div------------------------------ -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+		<!-- ---------------goshelter grand---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter grand.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER GRAND(GS011)</h5>
+				    <h6 id="h6">Lumbini Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    38 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter grand------------------------------ -->
+		<!-- ---------------goshelter021---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter coming soon.png" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER(GS021)</h5>
+				    <h6 id="h6">Kalpana Square,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-female pull-right"></i>
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="house caretaker" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter021------------------------------ -->
+		<!-- ---------------------goshelter royal------------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter royal.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER ROYAL(GS015)</h5>
+				    <h6 id="h6">Maitri Vihar,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    11 bed left!
+						    <i class="fa fa-female pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="house caretaker" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter royal------------------------------ -->
+	</div>
+	<!-- ------------------------------------------end fifth div-------------------------------------------------- -->
+	<!-- ------------------------------sixth div------------------------------ -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 shown">
+		<!-- ---------------------goshelter dc------------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter dc.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER DC(GS017)</h5>
+				    <h6 id="h6">Chandrasekharpur,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    33 bed left!
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+				  	<a href="#">
+				        <img src="reception.png" data-toggle="tooltip" data-placement="top" title="Reception" id="cctv">
+				    </a>   
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="house caretaker" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter dc------------------------------ -->
+		<!-- ---------------goshelter021---------------- -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<img src="goshelter rh.jpg" class="img-responsive">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				    <h5 id="h5">GOSHELTER RH(GS016)</h5>
+				    <h6 id="h6">Kalpana Square,Bhubaneswar</h6>
+				    <h4>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h4>    
+				    <h6 id="h6">Fully Furnished</h6>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4 class="pull-right" id="for-bed">
+						    0 bed left!
+						    <i class="fa fa-male pull-right"></i>
+					   </h4>
+					</div>
+			    </div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list-inline">
+				  	<a href="#">
+				  		<img src="cctv.png" data-toggle="tooltip" data-placement="top" title="Cctv" id="cctv">
+				  	</a>	
+			        <a href="#">
+			        	<img src="security.png" data-toggle="tooltip" data-placement="top" title="Security" id="cctv">
+			        </a>	
+			        <a href="#">
+			        	<img src="caretaker.png" data-toggle="tooltip" data-placement="top" title="house caretaker" id="cctv">
+			        </a>
+			        <a href="#">
+			        	<span class="view-more">
+			        	    +View more
+			        	</span>
+			        </a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="view-detail">View Details</a>
+			    </div>
+			    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			    	<a href="#" class="free-visit">Free Visit</a>
+			    </div>
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+			</div>
+		</div>
+		<!-- ------------------------end goshelter021------------------------------ -->
+	</div>
+	<!-- ------------------------------------------end sixth div-------------------------------------------------- -->
+	<!-- ---------------------hiding------------------------- -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+		<!-- ------------hidden prime---------------- -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<img src="prime.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">PRIME(GS003)</h5>
+				    <i class="fa fa-male"></i>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Patia,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+		<!-- -----------------end prime---------------- -->
+		<!-- ------------hidden goshelter sai home---------------- -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<img src="goshelter sai home.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER SAI HOME(GS006)</h5>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Nayapali,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+	<!-- -----------------end goshelter sai home---------------- -->
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+		<!-- ----------------------hidden kiddestay--------------------- -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<img src="kiddestay.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">KIDDESTAY(GS001)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Jayadev Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+		<!-- ---------------------end kiddestay------------------- -->
+		<!-- --------------kidde home------------------- -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<img src="kiddestay.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">KIDDE HOMES(GS002)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Jayadev Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+		<!-- ----------------------end kidde home---------------- -->
+	</div>
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+	<!-- -----------------hidden nightangle----------------------->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        	<img src="nightangle.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">NIGHTANGLE(GS009)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Maitri Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+	<!-- -----------------end nightangle------------------------ -->
+	<!-- -----------------hidden goshelter olive----------------------->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        	<img src="goshelter olive.png" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER OLIVE(GS00)</h5>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Chandrasekharpur,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+	<!-- -----------------end goshelter olive------------------------ -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	<!-- ---------------------hidden goshelter warrior-------------------------- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter warrior.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER WARRIOR(GS014)</h5>
+				    <i class="fa fa-male"></i>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Gajpati Nagar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- --------------------------end goshelter warrior---------------------------------------->
+    	<!-- ---------------hidden goshelter infocy------------- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter infocy.jpeg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER WARRIOR(GS012)</h5>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Sishu Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- ------------------end goshelter infocy--------------------------- -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	<!-- ------------------hidden goshelter p r house--------------- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter p r house.png" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER P R HOUSE(GS008)</h5>
+				    <i class="fa fa-male"></i>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Lumbini Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- -------------------end goshelter p r house------------------------- -->
+    	<!-- -----------------hidden goshelter coming soon1----------------- ---->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter coming soon.png" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER(000)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Maitri Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- --------------------end goshelter coming soon1---------------------------- -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	<!-- ---------------hidden goshelter qts-------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter qts.jpeg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER QTS(GS005)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Baramunda,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- ----------------------------end goshelter qts----------------------------  -->
+    	<!-- -------------------hidden goshelter 019---------------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter coming soon 2.jpeg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER(GS019)</h5>
+				    <i class="fa fa-female"></i>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Patia Square,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- ---------------------------end goshelter 019------------------------- -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	 <!-- -------------hidden goshelter grand----------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter grand.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER GRAND(GS011)</h5>
+				    <i class="fa fa-female"></i>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Lumbini Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- --------------------end goshelter grand----------------------- -->
+    	<!-- ---------------hidden goshelter021---------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter coming soon.png" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER(GS021)</h5>
+				    <i class="fa fa-female"></i>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Kalpana Square,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- ------------------------end goshelter021--------------------------- -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	<!-- --------------------hidden goshelter royal--------------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter royal.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER ROYAL(GS015)</h5>
+				    <i class="fa fa-female"></i>
+				    <h6 id="h61">Maitri Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- -----------------------end goshelter royal---------------------------- -->
+    	 <!-- -------------------hidden goshelter dc-------------------- -- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    		<img src="goshelter dc.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc">
+				<center>
+				    <h5 id="h5">GOSHELTER DC(GS017)</h5>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Chandrasekharpur,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	 <!-- -----------------------end goshelter dc-------------------------- -->
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-prime">
+    	<!---------------------------hidden goshelter rh------------------------- -->
+    	 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    	 	<img src="goshelter rh.jpg" class="img-responsive">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goloc"> 
+				<center>
+				    <h5 id="h5">GOSHELTER RH(GS016)</h5>
+				    <i class="fa fa-male"></i>
+				    <h6 id="h61">Maitri Vihar,Bhubaneswar</h6>
+				    <h6>
+				    	<i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				        <i class="fa fa-star"></i>
+				    </h6>    
+				    <h6 id="h6">Fully Furnished</h6>
+				    <a href="#" class="view-detail">View Details</a>
+				    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 space"></div>
+				</center>	
+			</div>
+		</div>
+    	<!-- ---------------------------end goshelter rh-------------------------------------- -->
+    	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+    </div>
+	<!-- --------------------------------end hiding---------------------------------->
+    </div>
+	<!-- ----------start coffee with me--------------- -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 full-screen">
+		<div class="container">
+		<h1 id="Unique">Why We Are Unique? Have A Look.</h1>
+			<p id="para">
+				We help you in finding & booking rentals of choice across Indian cities with ZERO brokerage. We assist you<br><br>
+			    from move-in, to home maintenance services, from safety & security to move-out.
+		    </p>
+			<p id="para">
+			    Whatever be your budget, whatsoever you may have desire of a home (a bed, a room or an entire house), and<br><br>
+			    we have many things for you!
+			</p>
+			<p id="para">
+			    New in the city? Try not to freeze! We help you in finding the best of everything, directly from best places to<br><br>
+			    live to the best morning ki adrak wali chai. Give us a chance to be your first companion in this new city!
+			</p>
+			<p id="para">
+			    We have a big happy family from different groups under one roof. Join Us.
+			</p>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="smile">
+				<i class="fa fa-smile-o"></i>
+				<h2>5,100</h2>
+     			<h3>HAPPY CUSTOMERS</h3>
+     		</div>
+     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="smile">
+     			<i class="glyphicon glyphicon-bed"></i>
+				<h2>5,100</h2>
+     			<h3>HAPPY CUSTOMERS</h3>
+     		</div>
+     		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="smile">
+				<i class="fa fa-users"></i>
+				<h2>5,100</h2>
+    			<h3>HAPPY CUSTOMERS</h3>
+            </div>	
+	    </div>
+	    <div class="space3"></div>
+	</div>
+	<!-- ------------------------------end coffee with me---------------------------------- -->
+	 <!-- ------------footer starts--------------------- -- -->
+    <footer class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h52">Stay Connected</h5>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <h5 id="h52">Booking Policy</h5><br>
+                    <a href="booking policy.html"><button type="button" class="btn1">Booking Policy</button></a>
+                    <a href="security deposite.html"><button type="button" class="btn1">Security Deposite</button></a>
+                    <a href="cancellation and refund.html"><button type="button" class="btn1">cancellilation & Refund Policy</button></a>
+                    <a href="safety and security.html"><button type="button" class="btn1">Safety & Security</button></a>
+                    <a href="terms of use.html"><button type="button" class="btn1">Terms Of Use</button></a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h53">Quick Links</h5><br>
+                        <li id="color"><a href="GOshelterAboutUs.html" id="Quick">About Us</a></li>
+                        <li id="color"><a href="FAQ.html" id="Quick">FAQ</a></li>
+                        <li id="color"><a href="fGoshelter.html" id="Quick">Contact Us</a></li>
+                        <li id="color"><a href="list-your-property.html" id="Quick">List Your Property</a></li>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h52">Contact Information</h5><br>
+                        <li id="color1">
+                            <i class="fa fa-home" style="width:20px;"></i>
+
+                            Unit no-127,First floor DLF Cybercity patia 751024
+                        </li>
+                        <li id="color1">
+                            <i class="fa fa-envelope" style="size:20px;"></i>
+
+                            Goshelterhospitality@gmail.com
+                        </li>
+                        <li id="color1">
+                            <i class="fa fa-phone" style="size:20px;"></i>
+
+                            +91-8114300892, +91-7978956590
+                        </li> 
+                </div>
+            </div>    
+        </div>
+    </footer>
+    <div class="container">
+        <div class="image-footer">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a href="#"><img src="logo.png"></a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h6 class="pull-right">Copyright 2020 | All rights reserved. Powered By : <a href="#" class="color-quantumware">Quantumware</a></h6>
+            </div>
+        </div>  
+    </div>
+    <!-- ---------------end footer---------------------- -->
+</body>
+</html>
