@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="go-shelter.css">
+	<title>GOshelterAboutUs</title>
+</head>
+<body>
+   <div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 image">
+					<center>
+					    <a href="#">
+						    <img src="logo.png">
+					    </a>
+				    </center>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 showing-property">
+					<div class="pull-right">
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-defult" data-toggle="modal" data-target="#login-id">Login</button>
+	                        <div class="modal" id="login-id">
+		                        <div class="modal-dialog">
+			                        <div class="modal-content">
+				                        <div class="modal-header">
+					                        <button type="button" class="close"  data-dismiss="modal">&times;</button>
+					                        <h4>Login</h4>
+				                        </div>
+				                        <div class="modal-body">
+					                        <div class="row">
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-envelope"></i>
+				    	                                Mobile Number
+				                                    </label>
+				                                    <input type="text" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-key"></i>
+				    	                                Password
+				                                    </label>
+				                                    <input type="Password" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    	                            <button type="button" class="submit-button form-control">Login</button>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5><input type="checkbox">Remember me?</h5>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5 class="pull-right">Forgot password?</h5>
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				        	                        <h5 class="text-center">Don't have an account?<a href="#"><strong>Register Now</strong></a></h5>
+				                                </div>
+				                            </div>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#register">Register</button>
+		                    <div class="modal" id="register">
+			                    <div class="modal-dialog">
+				                    <div class="modal-content">
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Registraion</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <div class="row">
+						                        <form>
+							                        <div class="form-group">
+							                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								                            <label>
+								    	                        <i class="fa fa-phone"></i>
+								                                Mobile Number
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Mobile Number">
+								                        </div>    
+							                        </div>
+							                        <center>
+						    	                        <button type="button" class="submit-button" class="form-control">SEND OTP</button>
+						                            </center>    
+						                        </form>
+					                        </div>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                   <!-- </div> -->
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Enquiry</button>
+		                    <div class="modal" id="modal">
+			                    <div class="modal-dialog modal-lg">
+				                    <div class="modal-content"> 
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Enquiry</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <h6><i><sup>*</sup>Fields are mandatory</i></h6>
+						                    <form>
+						                        <div class="row">
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							                            <div class="form-group">
+								                            <label>
+								    	                        <i class="fa fa-user"></i>
+								                                Full Name<sup>*</sup>
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Fullname">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-phone"></i>
+							    	                            Mobile Number<sup>*</sup>
+							                                </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Mobile number">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-map-marker"></i>
+							    	                            Interested Location<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Your Location">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-home"></i>
+							    	                            Wanted to stay from<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter your stay date">
+							                           </div>
+							                        </div>  
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					  		                            <div class="form-group">
+					 			                            <label>
+						 			                            <i class="fa fa-envelope"></i>
+						  	                          	        Email Address<sup>*</sup>
+						  		                            </label>
+						  		                            <input type="text" class="form-control" placeholder="Enter Email Address">
+						  		                        </div> 
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Enquiry For<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>Select Enquiry For</option>
+						  				                        <option>Hostel/PG</option>
+						  				                        <option>Rooms</option>
+						  				                        <option>Flats</option>
+						  				                        <option>Office Space</option>
+						  				                        <option>partnership Related</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Occupation<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>--Select Occupation--</option>
+						  				                        <option>Student</option>
+						  				                        <option>Job Holder</option>
+						  				                        <option>Allen Student</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Gender<sup>*</sup></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Female <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>male <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  		                        </div>
+						                            </div>
+						                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						       	                        <div class="form-group">
+						  		                            <label>
+						  			                            <i class="fa fa-comments"></i>
+						  	                                    Comment/Message
+						  		                            </label>
+						  		                            <textarea class="form-control" placeholder="Type Comment/Message"></textarea>
+							                            </div>
+						                            </div>
+						                            <center class="form-group">
+						    	                        <button type="button" class="submit-button" class="form-control">Submit</button>
+						                            </center>
+						                        </div>
+						                    </form>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                    <!-- </div> -->
+                     <!-- list your property -->
+                        <button type="button" class="btn btn-warning"><a href="list-your-property.html" id="list-prop-link">List your property</a></button>
+                    <!-- end here lyp -->
+                    </div>
+					<!-- ----------------hr------------- -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hr"></div>
+                    <!-- -------------end hr------------ -->
+                    <!-- ---------navbar------------ -->
+	                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			            <nav class="navbar">
+                            
+           	                    <ul class="nav navbar-nav navbar-right">
+           		                    <li><a href="GOSHELTER home.html" id="nav">Home</a></li>
+           	                        <li><a href="GOshelterAboutUs.html" id="nav">About Us</a></li>
+          	                        <li><a href="#" id="nav">Bhubaneswar <i class="fa fa-caret-down"></i></a></li>
+          	                        <li><a href="#" id="nav">Durgapur <i class="fa fa-caret-down"></i></a></li>
+           	                        <li><a href="fGoshelter.html" id="nav">Contact Us</a></li>
+           	                    </ul>
+           	                        
+                        </nav>
+	     	        </div>    
+	     	        <!-- --------------end navbar---------------- -->
+				</div>
+				<!-- ---------------the hide-property------------- -->
+				<div class="hide-property">
+					<center>
+						<!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-defult" data-toggle="modal" data-target="#login-id">Login</button>
+	                        <div class="modal" id="login-id">
+		                        <div class="modal-dialog">
+			                        <div class="modal-content">
+				                        <div class="modal-header">
+					                        <button type="button" class="close"  data-dismiss="modal">&times;</button>
+					                        <h4>Login</h4>
+				                        </div>
+				                        <div class="modal-body">
+					                        <div class="row">
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-envelope"></i>
+				    	                                Mobile Number
+				                                    </label>
+				                                    <input type="text" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+				    	                            <label>
+				    		                            <i class="fa fa-key"></i>
+				    	                                Password
+				                                    </label>
+				                                    <input type="Password" class="form-control" placeholder="Enter Mobile number">
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    	                            <button type="button" class="submit-button form-control">Login</button>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5><input type="checkbox">Remember me?</h5>
+				                                </div>
+				                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				        	                        <h5 class="pull-right">Forgot password?</h5>
+				                                </div>
+				                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				        	                        <h5 class="text-center">Don't have an account?<a href="#"><strong>Register Now</strong></a></h5>
+				                                </div>
+				                            </div>
+				                        </div>
+			                        </div>
+		                        </div>
+	                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#register">Register</button>
+		                    <div class="modal" id="register">
+			                    <div class="modal-dialog">
+				                    <div class="modal-content">
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Registraion</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <div class="row">
+						                        <form>
+							                        <div class="form-group">
+							                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								                            <label>
+								    	                        <i class="fa fa-phone"></i>
+								                                Mobile Number
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Mobile Number">
+								                        </div>    
+							                        </div>
+							                        <center>
+						    	                        <button type="button" class="submit-button" class="form-control">SEND OTP</button>
+						                            </center>    
+						                        </form>
+					                        </div>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                   <!-- </div> -->
+	                   <!-- <div class="container"> -->
+		                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Enquiry</button>
+		                    <div class="modal" id="modal">
+			                    <div class="modal-dialog modal-lg">
+				                    <div class="modal-content"> 
+					                    <div class="modal-header">
+						                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+						                    <h4>Enquiry</h4>
+					                    </div>
+					                    <div class="modal-body">
+						                    <h6><i><sup>*</sup>Fields are mandatory</i></h6>
+						                    <form>
+						                        <div class="row">
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							                            <div class="form-group">
+								                            <label>
+								    	                        <i class="fa fa-user"></i>
+								                                Full Name<sup>*</sup>
+								                            </label>
+								                            <input type="text" class="form-control" placeholder="Enter Fullname">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-phone"></i>
+							    	                            Mobile Number<sup>*</sup>
+							                                </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Mobile number">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-map-marker"></i>
+							    	                            Interested Location<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter Your Location">
+							                            </div>
+							                            <div class="form-group">
+							    	                        <label>
+							    		                        <i class="fa fa-home"></i>
+							    	                            Wanted to stay from<sup>*</sup>
+							    	                        </label>
+							    	                        <input type="text" class="form-control" placeholder="Enter your stay date">
+							                           </div>
+							                        </div>  
+							                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					  		                            <div class="form-group">
+					 			                            <label>
+						 			                            <i class="fa fa-envelope"></i>
+						  	                          	        Email Address<sup>*</sup>
+						  		                            </label>
+						  		                            <input type="text" class="form-control" placeholder="Enter Email Address">
+						  		                        </div> 
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Enquiry For<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>Select Enquiry For</option>
+						  				                        <option>Hostel/PG</option>
+						  				                        <option>Rooms</option>
+						  				                        <option>Flats</option>
+						  				                        <option>Office Space</option>
+						  				                        <option>partnership Related</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <label>
+						  				                        <i class="fa fa-home"></i>
+						  			                            Occupation<sup>*</sup>
+						  			                        </label>
+						  			                        <select type="text" class="form-control">
+						  				                        <option>--Select Occupation--</option>
+						  				                        <option>Student</option>
+						  				                        <option>Job Holder</option>
+						  				                        <option>Allen Student</option>
+						  				                        <option>Others</option>
+						  			                        </select>
+						  		                        </div>
+						  		                        <div class="form-group">
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Gender<sup>*</sup></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>Female <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  			                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						  				                        <h5>male <input type="radio" name="optradio" ></h5>
+						  			                        </div>
+						  		                        </div>
+						                            </div>
+						                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						       	                        <div class="form-group">
+						  		                            <label>
+						  			                            <i class="fa fa-comments"></i>
+						  	                                    Comment/Message
+						  		                            </label>
+						  		                            <textarea class="form-control" placeholder="Type Comment/Message"></textarea>
+							                            </div>
+						                            </div>
+						                            <center class="form-group">
+						    	                        <button type="button" class="submit-button" class="form-control">Submit</button>
+						                            </center>
+						                        </div>
+						                    </form>
+					                    </div>
+				                    </div>
+			                    </div>
+		                    </div>
+	                    <!-- </div> -->
+	                    <!-- ----------------hr------------- -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hr"></div>
+                        <!-- -------------end hr------------ -->
+                        <!-- ---------navbar------------ -->
+	                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			                <nav class="navbar">
+                                <div class="nav navbar-header">
+            	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#home">
+            			                <span class="icon-bar"></span>
+            			                <span class="icon-bar"></span>
+            		                    <span class="icon-bar"></span>
+            	                    </button>
+                                </div>            
+                                <div class="collapse navbar-collapse" id="home">
+           	                        <ul class="nav navbar-nav navbar-right">
+           		                        <li><a href="GOSHELTER home.html" id="nav">Home</a></li>
+           	                            <li><a href="GOshelterAboutUs.html" id="nav">About Us</a></li>
+          	                            <li><a href="#" id="nav">Bhubaneswar <i class="fa fa-caret-down"></i></a></li>
+          	                            <li><a href="#" id="nav">Durgapur <i class="fa fa-caret-down"></i></a></li>
+           	                            <li><a href="fGoshelter.html" id="nav">Contact Us</a></li>
+           	                        </ul>
+           	                    </div>        
+                            </nav>
+	     	            </div>    
+	     	        <!-- --------------end navbar---------------- -->
+					</center>
+				</div>
+				<!------end here the hide-property----------->
+			</div>
+		</div>
+	</div>
+	<!-- -------------location-image---------------- -->
+	<div class="location">
+        <img src="location.jpg">
+    </div>
+    <!-- --------------end location-image-------------- -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    	<h1 class="welcome">
+    		Welcome To GoShelter
+    	</h1>
+    </div>
+    <!-- ------------about goshelter-------------- -->
+    <div class="container">
+    	<div class="well">
+    		<h3 id="h3">About Goshelter</h3>
+    		<p id="para">
+    			GoShelter is one of the India's fastest growing Rental Network attempting to provide better accommodation solutions, 
+    			started at Bhubaneswar. We are focused on providing budget long and short term home-stay & workspaces to the common citizens.Youngsters confronted various types of problems. Single ladies and bachelors are viewed as problematic. Migrants from other areas are seen with doubt as they show up as 'outsiders' in another city. Further, numerous newcomers didn't have the expertise to get around, lacking access to nearby bits of knowledge in another city. We presumed that individuals leaving homes to move to another city required something beyond a house. They required a place they could call home, a network where they would be acknowledged and a stage which enables associations with different passages.At GoShelter we before long understood that it was important to go past nuts and bolts and make a stage that could do significantly more than simply take care of the prompt issues of room and peripherals. With globalization and correspondence taking a front line, we know that society is getting progressively divergent. Our reaction to this is - No city ought to be an outsider; no individual should feel separated. The way of thinking behind GoShelter developed to make a comprehensive living condition where youth have options but on the other hand are required to take ownership. Tenants would have choices so they could pick as per their spending limit and individual inclinations. We help them to find, book rental accommodation of choice across cities of their choice. We assist with move-in, provide home maintenance services from cleaning, repairing to rent payment, central security system & even move-out. The burden on owners would get lessened - to search for capable tenants, do background check and pursue tenants to pay in their dues. Later on, we trust GoShelter as a stage will develop in numerous different ways, with housing as the centre core interest.
+    		</p>
+    		<h3 id="h3">Mission</h3>
+    		<p id="para">
+    			To build a bridge between the house owners & tenants through an online platform for renting & managing of houses.
+    		</p>
+    		<h3 id="h3">Vision</h3>
+    		<p id="para">
+    			To be India’s most accessible rental networking unit.
+    		</p>
+    	</div>
+    </div>
+    <!-- -----------------end about---------------- -->
+    <!-- ------------footer starts--------------------- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h5">Stay Connected</h5>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <h5 id="h5">Booking Policy</h5><br>
+                    <a href="booking policy.html"><button type="button" class="btn1">Booking Policy</button></a>
+                    <a href="security deposite.html"><button type="button" class="btn1">Security Deposite</button></a>
+                    <a href="cancellation and refund.html"><button type="button" class="btn1">cancellilation & Refund Policy</button></a>
+                    <a href="safety and security.html"><button type="button" class="btn1">Safety & Security</button></a>
+                    <a href="terms of use.html"><button type="button" class="btn1">Terms Of Use</button></a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h51">Quick Links</h5><br>
+                        <li id="color"><a href="GOshelterAboutUs.html" id="Quick">About Us</a></li>
+                        <li id="color"><a href="FAQ.html" id="Quick">FAQ</a></li>
+                        <li id="color"><a href="fGoshelter.html" id="Quick">Contact Us</a></li>
+                        <li id="color"><a href="list-your-property.html" id="Quick">List Your Property</a></li>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <h5 id="h5">Contact Information</h5><br>
+                        <li id="color1">
+                            <i class="fa fa-home" style="width:20px;"></i>
+
+                            Unit no-127,First floor DLF Cybercity patia 751024
+                        </li>
+                        <li id="color1">
+                            <i class="fa fa-envelope" style="size:20px;"></i>
+
+                            Goshelterhospitality@gmail.com
+                        </li>
+                        <li id="color1">
+                            <i class="fa fa-phone" style="size:20px;"></i>
+
+                            +91-8114300892, +91-7978956590
+                        </li> 
+                </div>
+            </div>    
+        </div>
+    </footer>
+    <div class="container">
+        <div class="image-footer">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <a href="#"><img src="logo.png"></a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h6 class="pull-right">Copyright 2020 | All rights reserved. Powered By : <a href="#" class="color-quantumware">Quantumware</a></h6>
+            </div>
+        </div>  
+    </div>
+    <!-- ---------------end footer---------------------- -->
+</body>
+</html>
